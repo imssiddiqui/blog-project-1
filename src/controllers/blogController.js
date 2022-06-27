@@ -42,9 +42,9 @@ const createBlog = async function (req, res) {
         .status(400)
         .send({ status: false, msg: "authorId is required" });
     }
-      if (authorId != req.decodedToken.authorId) {
-      return res.status(400).send({status:false, msg:"not authorized"})
-    }
+//       if (authorId != req.decodedToken.authorId) {
+//       return res.status(400).send({status:false, msg:"not authorized"})
+//     }
     if (!check(tags)) {
       return res.status(400).send({ status: false, msg: "tags are required" });
     }
